@@ -52,13 +52,14 @@ export default function SecurityPledge({ onContinue }) {
               <li>If you attempt to cheat, your score will be canceled, college admissions offices may be notified, and you will be disqualified from taking any AP Exams, SAT or PSAT assessments, or CLEP exams.</li>
             </ul>
 
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-2 gap-8">
               <div>
                 <h2 className="text-[14px] font-bold text-bb-textDark pb-1.5 mb-3 border-b border-gray-300">
                   Test Security Pledge
                 </h2>
                 <p className="text-[14px] text-bb-textDark leading-relaxed">
-                  {PLEDGE_TEXT}
+                  I am the person who is supposed to take this exam. I agree to follow the rules above and understand what will happen if I break<br />
+                  them.
                 </p>
               </div>
               <div>
