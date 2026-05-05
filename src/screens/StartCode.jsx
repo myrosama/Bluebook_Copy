@@ -36,62 +36,73 @@ export default function StartCode({ onStart }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="h-12 bg-white border-b border-bb-border flex items-center justify-between px-6 text-[14px]">
-        <button className="flex items-center gap-2 text-bb-textDark hover:underline">
-          <span className="inline-flex items-center justify-center w-5 h-5 rounded-full border border-bb-textDark text-[12px]">?</span>
-          Help
-        </button>
-        <button className="flex items-center gap-2 text-bb-textDark hover:underline">
-          Return to Home
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-            <path d="M3 12 12 4l9 8" />
-            <path d="M5 10v10h14V10" />
-          </svg>
-        </button>
-      </div>
-
-      <div className="flex-1 bg-bb-mintGreen flex flex-col items-center pt-16 pb-12 px-6">
-        <h1 className="text-[44px] font-medium text-bb-textDark mb-12">Start Code</h1>
-        <p className="text-[18px] text-bb-textDark mb-2">
-          Enter your start code now to begin testing. Good luck!
-        </p>
-        <p className="text-[18px] text-bb-textDark mb-12">
-          The start code contains <span className="font-bold">numbers only</span>.
-        </p>
-
-        <div className="flex gap-3 mb-10">
-          {digits.map((d, i) => (
-            <input
-              key={i}
-              ref={(el) => (refs.current[i] = el)}
-              value={d}
-              inputMode="numeric"
-              onChange={(e) => setDigit(i, e.target.value)}
-              onKeyDown={(e) => onKeyDown(i, e)}
-              onPaste={onPaste}
-              maxLength={1}
-              className="w-[80px] h-[80px] bg-white border border-bb-textDark rounded-xl text-center text-[40px] font-medium text-bb-textDark outline-none shadow-sm focus:ring-2 focus:ring-bb-blue"
-            />
-          ))}
+      {/* Header — same container as Test Security */}
+      <header className="bg-white border-b border-bb-border">
+        <div className="max-w-[1040px] mx-auto h-[52px] px-8 flex items-center justify-between text-[15px]">
+          <button className="flex items-center gap-2 text-bb-textDark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7v.5" strokeLinecap="round" />
+              <circle cx="12" cy="17" r="0.8" fill="currentColor" />
+            </svg>
+            Help
+          </button>
+          <button className="flex items-center gap-2 text-bb-textDark">
+            Return to Home
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 11 12 3l9 8" />
+              <path d="M5 9.5V21h14V9.5" />
+            </svg>
+          </button>
         </div>
+      </header>
 
-        <button
-          disabled={!filled}
-          onClick={() => filled && onStart()}
-          className={`px-8 py-3 rounded-full text-[15px] font-semibold ${
-            filled
-              ? 'bg-bb-yellow hover:bg-bb-yellowDark text-bb-textDark cursor-pointer'
-              : 'bg-bb-yellow/60 text-bb-textDark/60 cursor-not-allowed'
-          }`}
-        >
-          Start Test
-        </button>
+      {/* Body — mint green, content in same container */}
+      <main className="flex-1 bg-bb-mintGreen flex flex-col">
+        <div className="max-w-[1040px] mx-auto w-full px-8 flex flex-col items-center pt-12 pb-8 flex-1">
+          <h1 className="text-[34px] font-normal text-bb-textDark mb-10">Start Code</h1>
 
-        <div className="flex-1" />
-        <p className="text-[14px] text-bb-textDark mt-20">
-          You can <a className="text-bb-blue underline">review the instructions</a> that the proctor reads aloud.
-        </p>
-      </div>
+          <p className="text-[15px] text-bb-textDark mb-1">
+            Enter your start code now to begin testing. Good luck!
+          </p>
+          <p className="text-[15px] text-bb-textDark mb-8">
+            The start code contains <span className="font-bold">numbers only</span>.
+          </p>
+
+          <div className="flex gap-2.5 mb-8">
+            {digits.map((d, i) => (
+              <input
+                key={i}
+                ref={(el) => (refs.current[i] = el)}
+                value={d}
+                inputMode="numeric"
+                onChange={(e) => setDigit(i, e.target.value)}
+                onKeyDown={(e) => onKeyDown(i, e)}
+                onPaste={onPaste}
+                maxLength={1}
+                className="w-[58px] h-[58px] bg-white border border-bb-textDark rounded-lg text-center text-[28px] font-medium text-bb-textDark shadow-sm focus:ring-2 focus:ring-bb-blue"
+              />
+            ))}
+          </div>
+
+          <button
+            disabled={!filled}
+            onClick={() => filled && onStart()}
+            className={`px-7 py-2.5 rounded-full text-[14px] font-semibold ${
+              filled
+                ? 'bg-bb-yellow hover:bg-bb-yellowDark text-bb-textDark cursor-pointer'
+                : 'bg-bb-yellow/55 text-bb-textDark/55 cursor-not-allowed'
+            }`}
+          >
+            Start Test
+          </button>
+
+          <div className="flex-1" />
+          <p className="text-[14px] text-bb-textDark text-center pb-2">
+            You can <a className="text-bb-blue underline">review the instructions</a> that the proctor reads aloud.
+          </p>
+        </div>
+      </main>
     </div>
   );
 }
