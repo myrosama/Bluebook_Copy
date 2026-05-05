@@ -5,17 +5,17 @@ export default {
     extend: {
       colors: {
         bb: {
-          headerBg: '#e7eaf4',
+          headerBg: '#e6edf8',
           pageBg: '#f5f5f5',
-          navy: '#1a2c5b',
-          navyDark: '#0f1c4d',
+          navy: '#28369a',
+          navyDark: '#1b2264',
           blue: '#324dc7',
           blueLight: '#4259d2',
           yellow: '#ffd54a',
           yellowDark: '#f5c426',
           border: '#d1d5db',
           gray: '#6b7280',
-          textDark: '#1f2937',
+          textDark: '#1e1e1e',
           reviewRed: '#c62828',
           mintGreen: '#d6e8d6',
           breakBg: '#0a0d14',

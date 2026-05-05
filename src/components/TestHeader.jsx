@@ -116,17 +116,8 @@ export default function TestHeader({
         </div>
       )}
     </header>
-    {/* Thin tick-mark divider — small dark dashes just below the navbar */}
-    <div
-      className="h-[8px] bg-bb-headerBg"
-      style={{
-        backgroundImage:
-          'linear-gradient(to right, #1a2c5b 0px, #1a2c5b 2px, transparent 2px, transparent 11px)',
-        backgroundSize: '11px 5px',
-        backgroundRepeat: 'repeat-x',
-        backgroundPosition: 'top left',
-      }}
-    />
+    {/* Dashed divider line below the navbar — standard CSS dashed style */}
+    <div className="h-0 border-t-[3px] border-dashed border-bb-textDark" />
     </>
   );
 }

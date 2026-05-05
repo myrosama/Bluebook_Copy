@@ -16,7 +16,10 @@ export default function TestFooter({
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <footer className="relative h-[64px] bg-white border-t border-bb-border flex items-center px-8">
+    <>
+    {/* Dashed divider line above the footer — matches the one below the navbar */}
+    <div className="h-0 border-t-[3px] border-dashed border-bb-textDark" />
+    <footer className="relative h-[64px] bg-white flex items-center px-8">
       <div className="text-[14px] font-semibold text-bb-textDark">{studentName}</div>
 
       <div className="flex-1 flex justify-center relative">
@@ -61,5 +64,6 @@ export default function TestFooter({
         </button>
       </div>
     </footer>
+    </>
   );
 }
