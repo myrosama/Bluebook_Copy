@@ -121,11 +121,14 @@ body {
   100% { transform: translate3d(40px, 110vh, 0) rotate(720deg); }
 }
 
-/* Custom focus styles */
+/* Custom focus styles — exclude textarea/input so they rely on their own border */
 button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
 [role='button']:focus-visible {
   outline: 2px solid #324dc7;
   outline-offset: 2px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
