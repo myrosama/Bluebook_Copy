@@ -40,7 +40,7 @@ export default function TestHeader({
       {/* Center: timer */}
       <div className="flex-1 flex flex-col items-center justify-center">
         {!hidden ? (
-          <div className="text-[28px] font-semibold tabular-nums text-bb-textDark">
+          <div className="text-[32px] font-bold tabular-nums text-bb-textDark leading-none">
             {formatTime(timeLeft)}
           </div>
         ) : (
@@ -48,7 +48,7 @@ export default function TestHeader({
         )}
         <button
           onClick={() => setHidden((v) => !v)}
-          className="text-[12px] px-4 py-[2px] rounded-full border border-bb-textDark text-bb-textDark hover:bg-white"
+          className="mt-1 text-[12px] px-4 py-[2px] rounded-full border border-bb-textDark text-bb-textDark hover:bg-white"
         >
           {hidden ? 'Show' : 'Hide'}
         </button>
@@ -99,8 +99,8 @@ export default function TestHeader({
       </div>
 
       {/* Battery indicator (top-right corner) */}
-      <div className="absolute top-2 right-2 flex items-center gap-1 text-[11px] text-bb-textDark">
-        <span>100%</span>
+      <div className="absolute top-2 right-3 flex items-center gap-1 text-[11px] text-bb-textDark">
+        <span>78%</span>
         <span className="battery"><span className="battery-fill" /></span>
       </div>
 
@@ -116,13 +116,13 @@ export default function TestHeader({
         </div>
       )}
     </header>
-    {/* Tick-mark divider band (no practice-test text) */}
+    {/* Thin tick-mark divider — small dark dashes just below the navbar */}
     <div
-      className="h-[26px] bg-bb-navyDark"
+      className="h-[8px] bg-bb-headerBg"
       style={{
         backgroundImage:
-          'linear-gradient(to right, #ffffff 0px, #ffffff 2px, transparent 2px, transparent 12px)',
-        backgroundSize: '12px 7px',
+          'linear-gradient(to right, #1a2c5b 0px, #1a2c5b 2px, transparent 2px, transparent 11px)',
+        backgroundSize: '11px 5px',
         backgroundRepeat: 'repeat-x',
         backgroundPosition: 'top left',
       }}
