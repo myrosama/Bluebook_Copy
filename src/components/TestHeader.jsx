@@ -21,6 +21,7 @@ export default function TestHeader({
   const isMath = module.type === 'math';
 
   return (
+    <>
     <header className="relative h-[78px] bg-bb-headerBg flex items-stretch px-8">
       {/* Left: section + directions */}
       <div className="flex flex-col justify-center min-w-[320px]">
@@ -115,6 +116,18 @@ export default function TestHeader({
         </div>
       )}
     </header>
+    {/* Tick-mark divider band (no practice-test text) */}
+    <div
+      className="h-[26px] bg-bb-navyDark"
+      style={{
+        backgroundImage:
+          'linear-gradient(to right, #ffffff 0px, #ffffff 2px, transparent 2px, transparent 12px)',
+        backgroundSize: '12px 7px',
+        backgroundRepeat: 'repeat-x',
+        backgroundPosition: 'top left',
+      }}
+    />
+    </>
   );
 }
 
