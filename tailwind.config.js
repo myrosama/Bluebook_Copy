@@ -23,8 +23,9 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Source Serif Pro"', 'Charter', 'Georgia', 'Cambria', 'serif'],
-        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'system-ui', 'sans-serif'],
+        serif: ['"Crimson Text"', '"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
+        sans: ['Inter', '"Helvetica Neue"', 'Helvetica', 'Arial', 'system-ui', 'sans-serif'],
+        mono: ['"Courier Prime"', 'ui-monospace', 'Menlo', 'monospace'],
       },
       boxShadow: {
         modal: '0 8px 24px rgba(0,0,0,0.15)',
