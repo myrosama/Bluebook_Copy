@@ -22,7 +22,7 @@ export default function TestFooter({
       className="h-[3px]"
       style={{
         backgroundImage:
-          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 14px, transparent 14px, transparent 22px)',
+          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 26px, transparent 26px, transparent 40px)',
       }}
     />
     <footer className="relative h-[64px] bg-bb-headerBg flex items-center px-8">
