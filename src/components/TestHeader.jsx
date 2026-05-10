@@ -25,13 +25,13 @@ export default function TestHeader({
     <header className="relative h-[80px] bg-bb-headerBg flex items-stretch px-8">
       {/* Left: section + directions */}
       <div className="flex flex-col justify-center min-w-[320px]">
-        <div className="text-[17px] font-bold text-bb-textDark leading-tight">{module.sectionLabel}</div>
+        <div className="text-[16px] font-bold text-bb-textDark leading-tight tracking-tight">{module.sectionLabel}</div>
         <button
           onClick={() => setShowDirections((v) => !v)}
-          className="text-[14px] text-bb-textDark mt-0.5 inline-flex items-center gap-1 w-fit hover:underline"
+          className="text-[14px] text-bb-textDark mt-1 inline-flex items-center gap-1 w-fit hover:underline"
         >
           Directions
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" className={showDirections ? 'rotate-180' : ''}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" className={showDirections ? 'rotate-180' : ''}>
             <path d="m6 9 6 6 6-6" />
           </svg>
         </button>
@@ -125,7 +125,7 @@ export default function TestHeader({
       className="h-[3px]"
       style={{
         backgroundImage:
-          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 10px, transparent 10px, transparent 16px)',
+          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 14px, transparent 14px, transparent 22px)',
       }}
     />
     </>
