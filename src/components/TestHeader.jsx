@@ -22,7 +22,7 @@ export default function TestHeader({
 
   return (
     <>
-    <header className="relative h-[84px] bg-bb-headerBg flex items-stretch px-8 pb-1">
+    <header className="relative h-[80px] bg-bb-headerBg flex items-stretch px-8">
       {/* Left: section + directions */}
       <div className="flex flex-col justify-center min-w-[320px]">
         <div className="text-[17px] font-bold text-bb-textDark leading-tight">{module.sectionLabel}</div>
