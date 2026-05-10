@@ -18,7 +18,13 @@ export default function TestFooter({
   return (
     <>
     {/* Dashed divider line above the footer — matches the one below the navbar */}
-    <div className="h-0 border-t-[3px] border-dashed border-bb-textDark" />
+    <div
+      className="h-[3px]"
+      style={{
+        backgroundImage:
+          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 10px, transparent 10px, transparent 16px)',
+      }}
+    />
     <footer className="relative h-[64px] bg-white flex items-center px-8">
       <div className="text-[14px] font-semibold text-bb-textDark">{studentName}</div>
 

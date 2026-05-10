@@ -22,7 +22,7 @@ export default function TestHeader({
 
   return (
     <>
-    <header className="relative h-[72px] bg-bb-headerBg flex items-stretch px-8 pt-3">
+    <header className="relative h-[84px] bg-bb-headerBg flex items-stretch px-8 pb-1">
       {/* Left: section + directions */}
       <div className="flex flex-col justify-center min-w-[320px]">
         <div className="text-[17px] font-bold text-bb-textDark leading-tight">{module.sectionLabel}</div>
@@ -120,8 +120,14 @@ export default function TestHeader({
         </div>
       )}
     </header>
-    {/* Dashed divider line below the navbar — standard CSS dashed style */}
-    <div className="h-0 border-t-[3px] border-dashed border-bb-textDark" />
+    {/* Dashed divider line below the navbar — longer dashes via gradient */}
+    <div
+      className="h-[3px]"
+      style={{
+        backgroundImage:
+          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 10px, transparent 10px, transparent 16px)',
+      }}
+    />
     </>
   );
 }
