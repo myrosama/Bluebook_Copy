@@ -17,34 +17,32 @@ export default function AnswerChoice({
     <div className="flex items-center gap-2">
       <button
         onClick={onSelect}
-        className={`answer-card flex-1 flex items-start gap-3 px-4 py-[14px] rounded-xl border bg-white text-left ${
-          selected ? 'border-bb-blue ring-2 ring-bb-blue' : 'border-bb-border'
+        className={`answer-card flex-1 flex items-center gap-3 px-4 py-[9px] rounded-lg border bg-white text-left ${
+          selected ? 'border-bb-blue ring-2 ring-bb-blue' : 'border-[#505050]'
         } ${struck ? 'opacity-60' : ''}`}
       >
         <span
-          className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-[13px] font-semibold border ${
+          className={`shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-semibold border ${
             selected
               ? 'bg-bb-blue text-white border-bb-blue'
-              : 'bg-white text-bb-textDark border-bb-textDark'
+              : 'bg-white text-bb-textDark border-[#505050]'
           }`}
         >
           {letter}
         </span>
-        <span className={`font-question text-[15.5px] leading-relaxed flex-1 ${struck ? 'strike-line' : ''}`}>
+        <span className={`font-question text-[15px] leading-5 flex-1 ${struck ? 'strike-line' : ''}`}>
           {katex ? <InlineMath math={text} /> : text}
         </span>
       </button>
 
-      {showStrike && (
-        <button
-          onClick={onToggleStrike}
-          title={struck ? 'Undo strikethrough' : 'Cross out this option'}
-          className="w-7 h-7 rounded-full border border-bb-textDark text-[12px] font-semibold inline-flex items-center justify-center text-bb-textDark hover:bg-gray-100 relative"
-        >
-          {letter}
-          <span className="absolute left-0 right-0 top-1/2 h-[1.5px] bg-bb-textDark rotate-[-12deg]" />
-        </button>
-      )}
+      <button
+        onClick={onToggleStrike}
+        title={struck ? 'Undo strikethrough' : 'Cross out this option'}
+        className="w-6 h-6 rounded-full border border-[#505050] text-[11px] font-semibold inline-flex items-center justify-center text-bb-textDark hover:bg-gray-100 relative shrink-0"
+      >
+        {letter}
+        <span className="absolute left-0.5 right-0.5 top-1/2 h-[1.5px] bg-[#505050] rotate-[-12deg]" />
+      </button>
     </div>
   );
 }

@@ -120,12 +120,12 @@ export default function TestHeader({
         </div>
       )}
     </header>
-    {/* Dashed divider line below the navbar — longer dashes via gradient */}
+    {/* Dashed divider line below the navbar */}
     <div
-      className="h-[3px]"
+      className="h-[2px]"
       style={{
         backgroundImage:
-          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 26px, transparent 26px, transparent 40px)',
+          'repeating-linear-gradient(to right, #000 0px, #000 23px, #fff 23px, #fff 25px)',
       }}
     />
     </>

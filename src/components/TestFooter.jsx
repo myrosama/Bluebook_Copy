@@ -17,15 +17,15 @@ export default function TestFooter({
 
   return (
     <>
-    {/* Dashed divider line above the footer — matches the one below the navbar */}
+    {/* Dashed divider line above the footer */}
     <div
-      className="h-[3px]"
+      className="h-[2px]"
       style={{
         backgroundImage:
-          'repeating-linear-gradient(to right, #1e1e1e 0px, #1e1e1e 26px, transparent 26px, transparent 40px)',
+          'repeating-linear-gradient(to right, #000 0px, #000 23px, #fff 23px, #fff 25px)',
       }}
     />
-    <footer className="relative h-[64px] bg-bb-headerBg flex items-center px-8">
+    <footer className="relative h-[50px] bg-bb-headerBg flex items-center px-8">
       <div className="text-[14px] font-semibold text-bb-textDark">{studentName}</div>
 
       <div className="flex-1 flex justify-center relative">

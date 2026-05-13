@@ -42,7 +42,7 @@ export default function EBRWQuestion({
       {/* Left passage */}
       <div
         style={{ width: `${leftPercent}%` }}
-        className="overflow-y-auto thin-scroll px-10 pt-8 pb-10 font-question"
+        className="overflow-y-auto thin-scroll px-10 pt-6 pb-10 font-question bg-white"
       >
         {passageLines.map((line, i) => (
           <p key={i} className={i > 0 ? 'mt-3' : ''}>
@@ -52,10 +52,10 @@ export default function EBRWQuestion({
       </div>
 
       {/* Divider */}
-      <div className="relative w-[1px] bg-bb-textDark/40 self-stretch flex items-center justify-center">
+      <div className="relative w-[2px] bg-[#888] self-stretch flex items-center justify-center">
         <button
           onMouseDown={() => (dragRef.current.dragging = true)}
-          className="absolute -left-3 w-7 h-9 bg-white border border-bb-textDark/60 rounded shadow-sm flex items-center justify-center cursor-col-resize"
+          className="absolute -left-3 w-7 h-9 bg-white border border-[#505050] rounded shadow-sm flex items-center justify-center cursor-col-resize"
           aria-label="Resize"
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -68,36 +68,44 @@ export default function EBRWQuestion({
       {/* Right question */}
       <div
         style={{ width: `${100 - leftPercent}%` }}
-        className="overflow-y-auto thin-scroll px-10 pt-6 pb-10"
+        className="flex flex-col h-full"
       >
-        <div className="max-w-[640px] mx-auto">
-          <div className="flex items-center justify-between gap-3 mb-1">
+        {/* Gray question header row */}
+        <div className="bg-[#f0f0f0] w-full shrink-0">
+          <div className="px-10 py-[7px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <span className="bg-bb-textDark text-white text-[14px] font-semibold rounded-sm w-7 h-7 inline-flex items-center justify-center">
+              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-6 h-6 inline-flex items-center justify-center shrink-0">
                 {qIndex + 1}
               </span>
               <MarkForReview marked={marked} onToggle={onToggleMark} />
             </div>
             <StrikethroughToggle active={strikeMode} onToggle={() => setStrikeMode((v) => !v)} />
           </div>
-          <div className="dashed-sep mb-5" />
+        </div>
 
-          <p className="font-question mb-5">{question.prompt}</p>
+        {/* Dashed separator */}
+        <div className="dashed-sep shrink-0" />
 
-          <div className="space-y-3">
-            {question.choices.map((choice, i) => (
-              <AnswerChoice
-                key={i}
-                index={i}
-                text={choice}
-                selected={selected === i}
-                struck={struckSet.has(i)}
-                showStrike={strikeMode}
-                onSelect={() => onSelect(i)}
-                onToggleStrike={() => onStrikethrough(i, !struckSet.has(i))}
-                katex={question.choicesKatex}
-              />
-            ))}
+        {/* Scrollable question content */}
+        <div className="flex-1 overflow-y-auto thin-scroll px-10 pt-5 pb-10">
+          <div className="max-w-[640px]">
+            <p className="font-question mb-5 mt-1">{question.prompt}</p>
+
+            <div className="space-y-3">
+              {question.choices.map((choice, i) => (
+                <AnswerChoice
+                  key={i}
+                  index={i}
+                  text={choice}
+                  selected={selected === i}
+                  struck={struckSet.has(i)}
+                  showStrike={strikeMode}
+                  onSelect={() => onSelect(i)}
+                  onToggleStrike={() => onStrikethrough(i, !struckSet.has(i))}
+                  katex={question.choicesKatex}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

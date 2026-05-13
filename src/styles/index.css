@@ -22,12 +22,9 @@ body {
   color: #1f2937;
 }
 
-/* Dashed separator under question header */
+/* Dashed separator under question header — same pattern as main header/footer dashes */
 .dashed-sep {
-  background-image: linear-gradient(to right, #9ca3af 50%, transparent 50%);
-  background-size: 8px 1px;
-  background-repeat: repeat-x;
-  background-position: bottom;
+  background-image: repeating-linear-gradient(to right, #000 0px, #000 18px, transparent 18px, transparent 20px);
   height: 1px;
 }
 
