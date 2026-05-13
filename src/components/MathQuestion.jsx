@@ -34,9 +34,9 @@ export default function MathQuestion({
     <div className="w-full h-full flex flex-col">
       {/* Gray question header row */}
       <div className="bg-[#f0f0f0] w-full shrink-0">
-        <div className="max-w-[760px] mx-auto px-10 py-[7px] flex items-center justify-between gap-3">
+        <div className="max-w-[760px] mx-auto px-10 py-[4px] flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-6 h-6 inline-flex items-center justify-center shrink-0">
+            <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-5 h-5 inline-flex items-center justify-center shrink-0">
               {qIndex + 1}
             </span>
             <MarkForReview marked={marked} onToggle={onToggleMark} />
@@ -79,7 +79,7 @@ export default function MathQuestion({
               </div>
             </div>
           ) : (
-            <div className="space-y-3">
+            <div className="space-y-[14px]">
               {question.choices.map((choice, i) => (
                 <AnswerChoice
                   key={i}

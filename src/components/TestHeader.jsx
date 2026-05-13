@@ -48,7 +48,7 @@ export default function TestHeader({
         )}
         <button
           onClick={() => setHidden((v) => !v)}
-          className="mt-1.5 text-[12px] px-3.5 py-[1px] rounded-full border border-bb-textDark text-bb-textDark hover:bg-white"
+          className="mt-1.5 text-[12px] px-3.5 py-[1px] rounded-md border border-bb-textDark text-bb-textDark hover:bg-white"
         >
           {hidden ? 'Show' : 'Hide'}
         </button>

@@ -2,9 +2,9 @@ export default function QuestionNavModal({ module, current, moduleAnswers, onClo
   const total = module.questions.length;
 
   return (
-    <div className="absolute bottom-[64px] left-1/2 -translate-x-1/2 z-30">
+    <div className="absolute bottom-[50px] left-1/2 -translate-x-1/2 z-30">
       <div className="relative">
-        <div className="bg-white rounded-md shadow-modal border border-bb-border w-[470px]">
+        <div className="bg-white rounded-md shadow-modal border border-bb-border w-[580px]">
           <div className="px-5 pt-4 pb-3 relative">
             <h3 className="text-center text-[15px] font-semibold text-bb-textDark leading-snug pr-6">
               {module.sectionLabel}
@@ -23,13 +23,13 @@ export default function QuestionNavModal({ module, current, moduleAnswers, onClo
 
           <div className="border-t border-b border-bb-border px-5 py-2 flex justify-around text-[13px] text-bb-textDark">
             <div className="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7Z" />
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-bb-textDark">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
               </svg>
               Current
             </div>
             <div className="flex items-center gap-2">
-              <span className="inline-block w-3 h-3 border border-dashed border-bb-textDark rounded-sm" />
+              <span className="inline-block w-[14px] h-[14px] border border-dashed border-bb-blue rounded-sm" />
               Unanswered
             </div>
             <div className="flex items-center gap-2">
@@ -51,13 +51,13 @@ export default function QuestionNavModal({ module, current, moduleAnswers, onClo
                 return (
                   <div key={i} className="relative flex flex-col items-center">
                     {isCurrent && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-bb-blue mb-[2px]">
-                        <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7Z" />
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-bb-textDark mb-[2px]">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                       </svg>
                     )}
                     <button
                       onClick={() => onJump(i)}
-                      className={`relative w-9 h-7 rounded-sm text-[13px] font-semibold inline-flex items-center justify-center ${
+                      className={`relative w-9 h-9 rounded-sm text-[13px] font-semibold inline-flex items-center justify-center ${
                         isCurrent
                           ? 'bg-bb-blue text-white'
                           : answered
@@ -79,7 +79,7 @@ export default function QuestionNavModal({ module, current, moduleAnswers, onClo
           </div>
 
           <div className="border-t border-bb-border p-4 flex justify-center">
-            <button className="px-5 py-2 rounded-full border border-bb-textDark text-[13px] text-bb-textDark hover:bg-gray-50">
+            <button className="px-5 py-2 rounded-full border border-bb-blue text-[13px] font-semibold text-bb-blue hover:bg-blue-50">
               Go to Review Page
             </button>
           </div>

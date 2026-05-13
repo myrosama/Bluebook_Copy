@@ -17,7 +17,7 @@ export default function AnswerChoice({
     <div className="flex items-center gap-2">
       <button
         onClick={onSelect}
-        className={`answer-card flex-1 flex items-center gap-3 px-4 py-[9px] rounded-lg border bg-white text-left ${
+        className={`answer-card flex-1 flex items-center gap-3 px-4 py-[10px] rounded-full border bg-white text-left ${
           selected ? 'border-bb-blue ring-2 ring-bb-blue' : 'border-[#505050]'
         } ${struck ? 'opacity-60' : ''}`}
       >

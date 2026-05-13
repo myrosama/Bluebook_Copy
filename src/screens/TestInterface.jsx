@@ -65,7 +65,7 @@ export default function TestInterface({
         onOpenHighlights={() => setShowHL((v) => !v)}
       />
 
-      <main className="flex-1 min-h-0 relative overflow-hidden bg-white">
+      <main className="flex-1 min-h-0 relative overflow-hidden bg-white" style={{ paddingTop: '33px' }}>
         {module.type === 'ebrw' ? (
           <EBRWQuestion
             key={`${moduleIndex}-${qIndex}`}

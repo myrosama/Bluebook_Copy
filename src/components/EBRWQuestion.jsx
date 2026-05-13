@@ -42,7 +42,7 @@ export default function EBRWQuestion({
       {/* Left passage */}
       <div
         style={{ width: `${leftPercent}%` }}
-        className="overflow-y-auto thin-scroll px-10 pt-6 pb-10 font-question bg-white"
+        className="overflow-y-auto thin-scroll px-10 pt-[5px] pb-10 font-question bg-white"
       >
         {passageLines.map((line, i) => (
           <p key={i} className={i > 0 ? 'mt-3' : ''}>
@@ -55,10 +55,10 @@ export default function EBRWQuestion({
       <div className="relative w-[2px] bg-[#888] self-stretch flex items-center justify-center">
         <button
           onMouseDown={() => (dragRef.current.dragging = true)}
-          className="absolute -left-3 w-7 h-9 bg-white border border-[#505050] rounded shadow-sm flex items-center justify-center cursor-col-resize"
+          className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#1e1e1e] rounded flex items-center justify-center cursor-col-resize"
           aria-label="Resize"
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
             <path d="m9 6-4 6 4 6" />
             <path d="m15 6 4 6-4 6" />
           </svg>
@@ -72,9 +72,9 @@ export default function EBRWQuestion({
       >
         {/* Gray question header row */}
         <div className="bg-[#f0f0f0] w-full shrink-0">
-          <div className="px-10 py-[7px] flex items-center justify-between gap-3">
+          <div className="px-10 py-[4px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-6 h-6 inline-flex items-center justify-center shrink-0">
+              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-5 h-5 inline-flex items-center justify-center shrink-0">
                 {qIndex + 1}
               </span>
               <MarkForReview marked={marked} onToggle={onToggleMark} />
@@ -91,7 +91,7 @@ export default function EBRWQuestion({
           <div className="max-w-[640px]">
             <p className="font-question mb-5 mt-1">{question.prompt}</p>
 
-            <div className="space-y-3">
+            <div className="space-y-[14px]">
               {question.choices.map((choice, i) => (
                 <AnswerChoice
                   key={i}
