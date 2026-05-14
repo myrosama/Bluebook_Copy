@@ -58,9 +58,9 @@ export default function EBRWQuestion({
           className="absolute -left-[3px] top-[22%] -translate-y-1/2 w-2.5 h-[22px] bg-[#1e1e1e] rounded-sm flex items-center justify-center cursor-col-resize"
           aria-label="Resize"
         >
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-            <path d="m3 2-2 3 2 3" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="m7 2 2 3-2 3" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="10" height="10" viewBox="0 0 10 10">
+            <polygon points="0,5 4,2 4,8" fill="white"/>
+            <polygon points="10,5 6,2 6,8" fill="white"/>
           </svg>
         </button>
       </div>
@@ -72,7 +72,7 @@ export default function EBRWQuestion({
       >
         {/* Gray question header row */}
         <div className="bg-[#f0f0f0] w-full shrink-0">
-          <div className="px-10 py-[3px] flex items-center justify-between gap-3">
+          <div className="max-w-[620px] mx-auto px-6 py-[3px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-5 h-[19px] inline-flex items-center justify-center shrink-0">
                 {qIndex + 1}
@@ -87,9 +87,9 @@ export default function EBRWQuestion({
         <div className="dashed-sep shrink-0" />
 
         {/* Scrollable question content */}
-        <div className="flex-1 overflow-y-auto thin-scroll px-10 pt-5 pb-10">
-          <div className="max-w-[640px]">
-            <p className="font-question mb-5 mt-1">{question.prompt}</p>
+        <div className="flex-1 overflow-y-auto thin-scroll">
+          <div className="max-w-[620px] mx-auto px-6 pt-5 pb-10">
+            <p className="font-question mb-3 mt-1">{question.prompt}</p>
 
             <div className="space-y-[14px]">
               {question.choices.map((choice, i) => (

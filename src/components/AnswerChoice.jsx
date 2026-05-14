@@ -38,10 +38,10 @@ export default function AnswerChoice({
       <button
         onClick={onToggleStrike}
         title={struck ? 'Undo strikethrough' : 'Cross out this option'}
-        className="w-[22px] h-4 rounded border border-[#515151] text-[11px] font-semibold inline-flex items-center justify-center text-bb-textDark hover:bg-gray-100 relative shrink-0"
+        className="w-5 h-5 rounded-full border border-[#515151] text-[11px] font-semibold inline-flex items-center justify-center text-bb-textDark hover:bg-gray-100 relative shrink-0"
       >
         {letter}
-        <span className="absolute left-0.5 right-0.5 top-1/2 h-[1.5px] bg-[#515151] rotate-[-12deg]" />
+        <span className="absolute left-0 right-0 top-1/2 h-[1.5px] bg-[#515151]" />
       </button>
     </div>
   );

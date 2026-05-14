@@ -31,10 +31,10 @@ export default function TestFooter({
       <div className="flex-1 flex justify-center relative">
         <button
           onClick={() => setShowNav((v) => !v)}
-          className="bg-bb-textDark text-white text-[14px] font-bold px-4 py-[6px] rounded-md inline-flex items-center gap-2"
+          className="bg-bb-textDark text-white text-[12px] font-semibold px-3 py-[4px] rounded-md inline-flex items-center gap-1.5"
         >
           Question {current + 1} of {total}
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
             <path d={showNav ? 'm6 15 6-6 6 6' : 'm6 9 6 6 6-6'} />
           </svg>
         </button>
