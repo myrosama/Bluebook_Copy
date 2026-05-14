@@ -45,7 +45,7 @@ export default function EBRWQuestion({
         className="overflow-y-auto thin-scroll px-10 pt-[5px] pb-10 font-question bg-white"
       >
         {passageLines.map((line, i) => (
-          <p key={i} className={i > 0 ? 'mt-3' : ''}>
+          <p key={i} className={i > 0 ? 'mt-2' : ''}>
             {line}
           </p>
         ))}
@@ -55,12 +55,12 @@ export default function EBRWQuestion({
       <div className="relative w-1 bg-[#888] self-stretch flex items-center justify-center">
         <button
           onMouseDown={() => (dragRef.current.dragging = true)}
-          className="absolute -left-[3px] top-1/2 -translate-y-1/2 w-2.5 h-[22px] bg-[#1e1e1e] rounded-sm flex items-center justify-center cursor-col-resize"
+          className="absolute -left-[3px] top-[22%] -translate-y-1/2 w-2.5 h-[22px] bg-[#1e1e1e] rounded-sm flex items-center justify-center cursor-col-resize"
           aria-label="Resize"
         >
-          <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
-            <line x1="2" y1="1" x2="2" y2="9" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
-            <line x1="4" y1="1" x2="4" y2="9" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="m3 2-2 3 2 3" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="m7 2 2 3-2 3" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
       </div>

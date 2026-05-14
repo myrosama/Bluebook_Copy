@@ -40,15 +40,15 @@ export default function TestHeader({
       {/* Center: timer */}
       <div className="flex-1 flex flex-col items-center justify-center">
         {!hidden ? (
-          <div className="text-[22px] font-bold tabular-nums text-bb-textDark leading-none">
+          <div className="text-[18px] font-bold tabular-nums text-bb-textDark leading-none">
             {formatTime(timeLeft)}
           </div>
         ) : (
-          <div className="text-[14px] text-bb-textDark py-2">More Time on This Section</div>
+          <div className="text-[13px] text-bb-textDark py-1">More Time on This Section</div>
         )}
         <button
           onClick={() => setHidden((v) => !v)}
-          className="mt-2 text-[12px] px-3.5 py-[3px] rounded-full border border-bb-textDark text-bb-textDark hover:bg-white"
+          className="mt-[10px] text-[11px] px-3 py-[1px] rounded-full border border-bb-textDark text-bb-textDark hover:bg-white"
         >
           {hidden ? 'Show' : 'Hide'}
         </button>
