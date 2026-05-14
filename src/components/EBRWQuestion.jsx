@@ -52,15 +52,15 @@ export default function EBRWQuestion({
       </div>
 
       {/* Divider */}
-      <div className="relative w-[2px] bg-[#888] self-stretch flex items-center justify-center">
+      <div className="relative w-1 bg-[#888] self-stretch flex items-center justify-center">
         <button
           onMouseDown={() => (dragRef.current.dragging = true)}
-          className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#1e1e1e] rounded flex items-center justify-center cursor-col-resize"
+          className="absolute -left-[3px] top-1/2 -translate-y-1/2 w-2.5 h-[22px] bg-[#1e1e1e] rounded-sm flex items-center justify-center cursor-col-resize"
           aria-label="Resize"
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-            <path d="m9 6-4 6 4 6" />
-            <path d="m15 6 4 6-4 6" />
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
+            <line x1="2" y1="1" x2="2" y2="9" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
+            <line x1="4" y1="1" x2="4" y2="9" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
         </button>
       </div>
@@ -72,9 +72,9 @@ export default function EBRWQuestion({
       >
         {/* Gray question header row */}
         <div className="bg-[#f0f0f0] w-full shrink-0">
-          <div className="px-10 py-[4px] flex items-center justify-between gap-3">
+          <div className="px-10 py-[3px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-5 h-5 inline-flex items-center justify-center shrink-0">
+              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-5 h-[19px] inline-flex items-center justify-center shrink-0">
                 {qIndex + 1}
               </span>
               <MarkForReview marked={marked} onToggle={onToggleMark} />

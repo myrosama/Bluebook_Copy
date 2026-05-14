@@ -22,7 +22,7 @@ export default function TestHeader({
 
   return (
     <>
-    <header className="relative h-[80px] bg-bb-headerBg flex items-stretch px-8">
+    <header className="relative h-[64px] bg-bb-headerBg flex items-stretch px-8">
       {/* Left: section + directions */}
       <div className="flex flex-col justify-center min-w-[320px]">
         <div className="text-[16px] font-bold text-bb-textDark leading-tight tracking-tight">{module.sectionLabel}</div>
@@ -48,7 +48,7 @@ export default function TestHeader({
         )}
         <button
           onClick={() => setHidden((v) => !v)}
-          className="mt-1.5 text-[12px] px-3.5 py-[1px] rounded-md border border-bb-textDark text-bb-textDark hover:bg-white"
+          className="mt-2 text-[12px] px-3.5 py-[3px] rounded-full border border-bb-textDark text-bb-textDark hover:bg-white"
         >
           {hidden ? 'Show' : 'Hide'}
         </button>

@@ -3,7 +3,7 @@ export default function StrikethroughToggle({ active, onToggle }) {
     <button
       onClick={onToggle}
       title="Cross out answer choices"
-      className={`w-9 h-7 rounded-sm inline-flex items-center justify-center text-[11px] font-bold relative ${
+      className={`w-[26px] h-[19px] rounded-sm inline-flex items-center justify-center text-[10px] font-bold relative ${
         active ? 'bg-bb-navyDark text-white' : 'bg-bb-blue text-white'
       }`}
     >

@@ -65,7 +65,10 @@ export default function TestInterface({
         onOpenHighlights={() => setShowHL((v) => !v)}
       />
 
-      <main className="flex-1 min-h-0 relative overflow-hidden bg-white" style={{ paddingTop: '33px' }}>
+      {/* Dark navy section band (matches Bluebook reference: 26px below tick line) */}
+      <div className="h-[26px] bg-bb-navyDark shrink-0 mx-8" />
+
+      <main className="flex-1 min-h-0 relative overflow-hidden bg-white" style={{ paddingTop: '30px' }}>
         {module.type === 'ebrw' ? (
           <EBRWQuestion
             key={`${moduleIndex}-${qIndex}`}
