@@ -51,8 +51,11 @@ export default function EBRWQuestion({
         ))}
       </div>
 
-      {/* Divider */}
-      <div className="relative w-1 bg-[#888] self-stretch flex items-center justify-center">
+      {/* Divider — extends 30px up to cover the paddingTop gap on <main> */}
+      <div
+        className="relative w-1 bg-[#888] flex items-center justify-center"
+        style={{ marginTop: '-30px', height: 'calc(100% + 30px)', alignSelf: 'flex-start' }}
+      >
         <button
           onMouseDown={() => (dragRef.current.dragging = true)}
           className="absolute -left-[3px] top-[22%] -translate-y-1/2 w-2.5 h-[22px] bg-[#1e1e1e] rounded-sm flex items-center justify-center cursor-col-resize"
