@@ -26,12 +26,12 @@ export default function TestFooter({
       }}
     />
     <footer className="relative h-[54px] bg-bb-headerBg flex items-center px-8">
-      <div className="text-[14px] font-semibold text-bb-textDark">{studentName}</div>
+      <div className="text-[16px] font-semibold text-bb-textDark">{studentName}</div>
 
-      <div className="flex-1 flex justify-center relative">
+      <div className="flex-1 flex justify-center relative -translate-x-8">
         <button
           onClick={() => setShowNav((v) => !v)}
-          className="bg-bb-textDark text-white text-[14px] font-bold px-4 py-[6px] rounded-md inline-flex items-center gap-1.5"
+          className="bg-bb-textDark text-white text-[13px] font-semibold px-3 py-[5px] rounded-md inline-flex items-center gap-1.5"
         >
           Question {current + 1} of {total}
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
