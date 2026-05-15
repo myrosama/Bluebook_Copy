@@ -71,8 +71,8 @@ export default function EBRWQuestion({
         className="flex flex-col h-full"
       >
         {/* Gray question header row */}
-        <div className="bg-[#f0f0f0] w-full shrink-0">
-          <div className="max-w-[620px] mx-auto px-6 py-[3px] flex items-center justify-between gap-3">
+        <div className="w-full shrink-0">
+          <div className="max-w-[620px] mx-auto bg-[#f0f0f0] pl-4 pr-6 py-[3px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-5 h-[19px] inline-flex items-center justify-center shrink-0">
                 {qIndex + 1}
@@ -84,11 +84,13 @@ export default function EBRWQuestion({
         </div>
 
         {/* Dashed separator */}
-        <div className="dashed-sep shrink-0" />
+        <div className="shrink-0 max-w-[620px] mx-auto w-full">
+          <div className="dashed-sep" />
+        </div>
 
         {/* Scrollable question content */}
         <div className="flex-1 overflow-y-auto thin-scroll">
-          <div className="max-w-[620px] mx-auto px-6 pt-5 pb-10">
+          <div className="max-w-[620px] mx-auto pl-4 pr-6 pt-2 pb-10">
             <p className="font-question mb-3 mt-1">{question.prompt}</p>
 
             <div className="space-y-[14px]">
