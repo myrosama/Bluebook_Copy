@@ -65,10 +65,10 @@ export default function EBRWQuestion({
         </button>
       </div>
 
-      {/* Right question — px-8 centers with equal margins left and right */}
+      {/* Right question — pl-4 left, pr-16 right matches real Bluebook proportions */}
       <div
         style={{ width: `${100 - leftPercent}%` }}
-        className="flex flex-col h-full px-8"
+        className="flex flex-col h-full px-16"
       >
         {/* Gray question header row — fills the px-8 padded column */}
         <div className="bg-[#f0f0f0] w-full shrink-0 py-[3px] flex items-center justify-between gap-3">
