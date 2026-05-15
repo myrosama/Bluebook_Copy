@@ -65,32 +65,28 @@ export default function EBRWQuestion({
         </button>
       </div>
 
-      {/* Right question */}
+      {/* Right question — px-8 centers with equal margins left and right */}
       <div
         style={{ width: `${100 - leftPercent}%` }}
-        className="flex flex-col h-full"
+        className="flex flex-col h-full px-8"
       >
-        {/* Gray question header row */}
-        <div className="w-full shrink-0">
-          <div className="max-w-[620px] mx-auto bg-[#f0f0f0] pl-4 pr-6 py-[3px] flex items-center justify-between gap-3">
-            <div className="flex items-center gap-3">
-              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-6 h-[28px] inline-flex items-center justify-center shrink-0">
-                {qIndex + 1}
-              </span>
-              <MarkForReview marked={marked} onToggle={onToggleMark} />
-            </div>
-            <StrikethroughToggle active={strikeMode} onToggle={() => setStrikeMode((v) => !v)} />
+        {/* Gray question header row — fills the px-8 padded column */}
+        <div className="bg-[#f0f0f0] w-full shrink-0 py-[3px] flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-6 h-[28px] inline-flex items-center justify-center shrink-0">
+              {qIndex + 1}
+            </span>
+            <MarkForReview marked={marked} onToggle={onToggleMark} />
           </div>
+          <StrikethroughToggle active={strikeMode} onToggle={() => setStrikeMode((v) => !v)} />
         </div>
 
         {/* Dashed separator */}
-        <div className="shrink-0 max-w-[620px] mx-auto w-full">
-          <div className="dashed-sep" />
-        </div>
+        <div className="dashed-sep shrink-0" />
 
         {/* Scrollable question content */}
         <div className="flex-1 overflow-y-auto thin-scroll">
-          <div className="max-w-[620px] mx-auto pl-4 pr-6 pt-2 pb-10">
+          <div className="pt-2 pb-10">
             <p className="font-question mb-3 mt-1">{question.prompt}</p>
 
             <div className="space-y-[14px]">
