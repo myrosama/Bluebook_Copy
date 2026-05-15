@@ -74,7 +74,7 @@ export default function EBRWQuestion({
         <div className="w-full shrink-0">
           <div className="max-w-[620px] mx-auto bg-[#f0f0f0] pl-4 pr-6 py-[3px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-5 h-[19px] inline-flex items-center justify-center shrink-0">
+              <span className="bg-bb-textDark text-white text-[12px] font-bold rounded-sm w-6 h-[28px] inline-flex items-center justify-center shrink-0">
                 {qIndex + 1}
               </span>
               <MarkForReview marked={marked} onToggle={onToggleMark} />
